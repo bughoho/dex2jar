@@ -518,7 +518,7 @@ public class FillArrayTransformer extends StatedTransformer {
                 } else { // ASSIGN
                     ArrayExpr ae = (ArrayExpr) p.getOp1();
                     int idx = ((Number) ((Constant) ae.getOp2()).value).intValue();
-                    // Skip arrays with negative indices (invalid bytecode, possibly obfuscation)
+                    // Skip arrays with negative indices(invalid bytecode, possibly obfuscation)
                     if (idx < 0) {
                         needRemove = true;
                         break;
